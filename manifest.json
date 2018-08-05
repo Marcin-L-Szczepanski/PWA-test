@@ -5,7 +5,7 @@
   "background_color": "#2196f3",
   "display": "browser",
   "scope": "/",
-  "start_url": "/",
+  "start_url": "/PWA-test",
   "icons": [
     {
       "src": "images/icon-72x72.png",
