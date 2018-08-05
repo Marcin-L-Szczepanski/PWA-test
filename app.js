@@ -56,3 +56,14 @@ window.addEventListener('beforeinstallprompt', e => {
   e.preventDefault();
   e.prompt();
 });
+
+
+// check for support
+if ('serviceWorker' in navigator) {
+  try {
+    // calls navigator.serviceWorker.register('sw.js');
+    registerServiceWorker();
+  } catch (e) {
+    console.error(e);
+  }
+}
