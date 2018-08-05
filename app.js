@@ -34,6 +34,18 @@
     output.outerHTML = entries += '<output></output>';
   }
   
+  (async function() {
+    let page = 1;
+    
+    async function loadMoreEntries() {
+      loadMore.disabled = true;
+      const entries = await loadEntries(page++);
+      console.log(entries);
+      appendEntries(entries);
+    }
+    
+    loadMoreEntries();
+  })();
   
   console.log(loadEntries(1));
   
