@@ -57,6 +57,13 @@ window.addEventListener('beforeinstallprompt', e => {
   e.prompt();
 });
 
+async function registerServiceWorker() {
+  try {
+    const registration = await navigator.serviceWorker.register('sw.js');
+  } catch (e) {
+    console.error('ServiceWorker failed', e);
+  }
+}
 
 // check for support
 if ('serviceWorker' in navigator) {
