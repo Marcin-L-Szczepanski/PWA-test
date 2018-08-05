@@ -50,3 +50,9 @@
   console.log(loadEntries(1));
   
 })();
+
+
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault();
+  e.prompt();
+});
