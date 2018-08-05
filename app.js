@@ -27,6 +27,14 @@
         return `<section class="entry"><h2 class="entry-title">${post.title}</h2><article class="entry-body">${post.body}</article><div class="entry-author"><a href="mailto:${user.email}">${user.name}</a></div></section>`;
         }).join('');
   }
-
+  
+  
+  function appendEntries(entries) {
+    const output = container.querySelector('output') || container.appendChild(document.createElement('output'));
+    output.outerHTML = entries += '<output></output>';
+  }
+  
+  
+  console.log(loadEntries(1));
   
 })();
